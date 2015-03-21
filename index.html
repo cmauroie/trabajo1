@@ -1,29 +1,44 @@
-<!DOCTYPE html><html><head>
-<style type="text/css">
+<!DOCTYPE html>
 
-.button_example{
-border:4px solid #26759E;-webkit-box-shadow: #878787 0px 2px 2px ;-moz-box-shadow: #878787 0px 2px 2px ; box-shadow: #878787 0px 2px 2px ; -webkit-border-radius: 23px; -moz-border-radius: 23px;border-radius: 23px;font-size:13px;font-family:arial, helvetica, sans-serif; padding: 10px 20px 10px 20px; text-decoration:none; display:inline-block;text-shadow: 2px 2px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
- background-color: #3093C7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093C7), to(#1C5A85));
- background-image: -webkit-linear-gradient(top, #3093C7, #1C5A85);
- background-image: -moz-linear-gradient(top, #3093C7, #1C5A85);
- background-image: -ms-linear-gradient(top, #3093C7, #1C5A85);
- background-image: -o-linear-gradient(top, #3093C7, #1C5A85);
- background-image: linear-gradient(to bottom, #3093C7, #1C5A85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093C7, endColorstr=#1C5A85);
-}
-
-.button_example:hover{
- border:4px solid #26759E;
- background-color: #26759E; background-image: -webkit-gradient(linear, left top, left bottom, from(#26759E), to(#133D5B));
- background-image: -webkit-linear-gradient(top, #26759E, #133D5B);
- background-image: -moz-linear-gradient(top, #26759E, #133D5B);
- background-image: -ms-linear-gradient(top, #26759E, #133D5B);
- background-image: -o-linear-gradient(top, #26759E, #133D5B);
- background-image: linear-gradient(to bottom, #26759E, #133D5B);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#26759E, endColorstr=#133D5B);
-}
-</style></head>
+<html lang= "es-ES">
+<head>
+  <meta charset= "utf-8">
+  <meta name = "viewport" content="witdh=device-width,
+  initial-scale=1,maximun-scale=1">
+  <link rel= "stylesheet" type="text/css" href="styles.css">
+  <title>Test RWD</title>
+</head>
 <body>
-
-<a class="button_example" href="#">PREVIEW BUTTON</a>
-
+  <section id="container">
+    <header>
+      <h1>Mi sitio de películas</h1>
+      <p>Este es nuestro sitio de pelicula con Microformatos</p>
+    </header>
+    <section id="content">
+      <article>
+        <div itemscope itemtype="http://schema.org/Movie">
+        <h2 itemprop="name">Inception</h2>
+					<div itemprop="director" itemscope="http://schema.org/Person">
+						Director: <span itemprop="director">Christopher Nolan</span>
+					</div>
+					<span itemtprop="genre">Ciencia Ficción</span>
+					<a href="#" itemprop="trailer">Trailer de la Película</a>
+				</div>
+			</article>
+			<article>
+				<h2>Texto</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+		</section>
+        <footer>
+			Creado en 2015 &copy;
+		</footer>
+	</section>
+  
 </body>
-</html>
+<style type="text/css">
